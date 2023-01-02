@@ -57,13 +57,6 @@ li:hover::after {
   width: 2rem;
 }
 
-body {
-  margin: 0;
-  padding: 0;
-  font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
-  line-height: 1.5;
-}
-
 .hero-banner {
     /* Sizing and positioning */
     height: 200px;
@@ -74,6 +67,28 @@ body {
     background-position: center;
 }
 
+body {
+  margin: 0;
+  padding: 0;
+  font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+  line-height: 1.5;
+  display: grid;
+  grid-template-rows: 300x 300px;
+  gap: 10px;
+  color: black;
+  
+}
+
+.image-container {
+  height: 300px;
+  width: 800px;
+  }
+  
+  .image-container img {
+  max-height: 100%;
+  max-width: 100%;
+  }
+
 .float-left {
     float: left;
     margin-right: 25px;
@@ -82,6 +97,58 @@ body {
 .float-right {
     float: right;
     margin-left: 25px;
+}
+
+.container {
+  position: relative;
+  text-align: right;
+  color: black;
+  bottom: 1px;
+  right: 16px;
+}
+
+.About-Me {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 10px;
+  grid-auto-rows: minmax(100px, auto);
+
+}
+
+.containerGrid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: 1fr 1fr 1fr;
+  grid-template-areas:
+    "topRow topRow"
+    "leftSidebar rightContent"
+    "leftSidebar rightContent"
+    ;
+  gap: 10px;
+  background-color: #2196F3;
+  padding: 10px;
+}
+
+.containerGrid div{
+
+  background-color: green;
+}
+.topRow {
+  grid-area: topRow;
+  background-image: url("../images/02-portfolio-4.jpg");
+}
+.leftSidebar {
+  grid-area: leftSidebar;
+}
+.rightContent {
+  grid-area: rightContent;
+}
+
+.grid-container > div {
+  background-color: rgba(255, 255, 255, 0.8);
+  text-align: center;
+  padding: 20px 0;
+  font-size: 30px;
 }
 
 h1,
